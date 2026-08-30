@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Termux boot hook — runs sms-limit-apply at device startup.
+# Place this file in ~/.termux/boot/ and ensure it is executable.
+# Termux:Boot app must be installed from F-Droid.
+
+sleep 5   # allow Android to settle before applying settings
+
+"$HOME/.local/bin/sms-limit-apply"

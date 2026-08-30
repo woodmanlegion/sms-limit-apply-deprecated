@@ -1,0 +1,8 @@
+#!/data/data/com.termux/files/usr/bin/bash
+# Re-applies Android global SMS rate-limit bypass settings.
+# Safe to run repeatedly. Call from boot hook or manually after reboot/update.
+su -c "settings put global sms_outgoing_check_max_count 99999"
+su -c "settings put global sms_outgoing_check_interval_ms 99999999"
+echo "SMS rate limit settings applied:"
+su -c "settings get global sms_outgoing_check_max_count"
+su -c "settings get global sms_outgoing_check_interval_ms"
