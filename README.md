@@ -1,4 +1,13 @@
-# sms-limit-apply
+# sms-limit-apply (deprecated — see woodmanlegion/termux-sms)
+
+**Deprecated 2026-10-03.** Folded into [`woodmanlegion/termux-sms`](https://github.com/woodmanlegion/termux-sms)
+along with `skill-sms-send`, `skill-mms-send`, and `skill-mms-receive`.
+The rate-limit bypass is now applied automatically by `sms-send` before
+every send and once per cycle by the shared poller (`termux-sms-poll`)
+— no separate boot hook needed, since both already cover the real need.
+Archived.
+
+---
 
 Bypass the Android SMS outgoing rate-limit by patching two global settings via root. Includes a Termux:Boot hook so the settings survive device restarts.
 
